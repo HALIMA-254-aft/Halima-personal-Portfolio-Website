@@ -1,0 +1,407 @@
+/* ------------------------------
+   GLOBAL RESET & BASE
+--------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f6f7;
+    color: #1a1a1a;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Smooth animations globally */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------
+   NAVIGATION BAR
+--------------------------------*/
+nav {
+    background: #1a1a1a;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #c6a667;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   HERO / HEADER SECTION
+--------------------------------*/
+.hero-container {
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-container h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.hero-container h1 span {
+    color: #c6a667;
+}
+
+.hero-container h2 {
+    margin: 15px 0;
+    font-size: 24px;
+    color: #2d4a53;
+    font-weight: 600;
+}
+
+.hero-container p {
+    max-width: 750px;
+    margin: 10px auto;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* ------------------------------
+   SECTION HEADINGS
+--------------------------------*/
+h2 {
+    font-size: 32px;
+    margin: 60px auto 20px;
+    text-align: center;
+    color: #66510c;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: #8a6317;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* ------------------------------
+   IMAGE STYLING
+--------------------------------*/
+img {
+    display: block;
+    margin: 25px auto;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* ------------------------------
+   CARDS / LISTS / CONTENT BLOCKS
+--------------------------------*/
+section, div {
+    padding: 20px;
+}
+
+/* Clean card-style lists */
+ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 0;
+}
+
+ul li {
+    background: #4e1929b7;
+    padding: 15px;
+    margin: 12px 0;
+    border-left: 5px solid #c6a667;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* ------------------------------
+   BUTTON LINKS
+--------------------------------*/
+a {
+    color: #c6a667;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin: 15px auto;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #1a1a1a;
+    text-decoration: underline;
+}
+
+
+/* ------------------------------
+      CONTACT SECTION
+--------------------------------*/
+#contact {
+    padding: 60px 25px;
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.18);
+}
+
+/* Section intro text */
+#contact .section-intro {
+    text-align: center;
+    font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    color: #2d2d2d;
+    opacity: 0.9;
+}
+
+/* Contact info block */
+#contact .contact-info {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#contact .contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+#contact .contact-info a {
+    color: #c6a667;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#contact .contact-info a:hover {
+    color: #1a1a1a;
+}
+
+/* Form title */
+#contact h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #66510c;
+    font-size: 26px;
+}
+
+/* Contact form */
+#contact .contact-form {
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Inputs + textarea */
+#contact .contact-form input,
+#contact .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    background: #fafafa;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#contact .contact-form input:focus,
+#contact .contact-form textarea:focus {
+    outline: none;
+    border-color: #c6a667;
+    background: #ffffff;
+}
+
+/* Submit button */
+#contact .contact-form button {
+    width: 60%;
+    margin: 12px auto 0;
+    padding: 15px;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.35s;
+    font-size: 18px;
+}
+
+#contact .contact-form button:hover {
+    background: #c6a667;
+    color: #1a1a1a;
+}
+/* ---------------------------------
+            ABOUT SECTION
+----------------------------------*/
+#about {
+    padding: 70px 30px;
+    max-width: 950px;
+    margin: 70px auto;
+    background: rgb(235, 225, 225);
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    animation: fadeIn 1.2s ease;
+}
+
+/* ABOUT heading */
+#about h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #66510c;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Paragraph styling */
+#about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 18px;
+    max-width: 850px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.95;
+}
+
+/* Highlighted words like your name */
+#about p strong {
+    color: #c6a667;
+    font-weight: 700;
+}
+
+/* Soft fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+    #about {
+        padding: 50px 20px;
+    }
+
+    #about h1 {
+        font-size: 32px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+}
+
+
+/* ------------------------------
+      FOOTER
+--------------------------------*/
+#footer-section {
+    margin-top: 60px;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#footer-section p {
+    margin: 5px 0;
+}
+
+#footer-section img {
+    width: 160px;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer, 
+div:last-child {
+    margin-top: 60px;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 35px 0;
+    text-align: center;
+    box-shadow: 0 -3px 10px rgba(0,0,0,0.25);
+}
+
+div:last-child p {
+    color: #ffffff;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+/* ------------------------------
+   ANIMATIONS
+--------------------------------*/
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+--------------------------------*/
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .hero-container h1 {
+        font-size: 34px;
+    }
+
+    .hero-container p {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+}
