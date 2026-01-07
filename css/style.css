@@ -13,6 +13,7 @@ body {
     color: #1a1a1a;
     line-height: 1.7;
     overflow-x: hidden;
+
 }
 
 /* Smooth animations globally */
@@ -21,8 +22,9 @@ html {
 }
 
 /* ------------------------------
-   NAVIGATION BAR
+<!--NAVIGATION BAR-->
 --------------------------------*/
+  
 nav {
     background: #1a1a1a;
     padding: 15px 0;
@@ -311,11 +313,7 @@ a:hover {
     font-weight: 700;
 }
 
-/* Soft fade-in animation */
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(25px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
+
 
 /* Responsive About Section */
 @media (max-width: 768px) {
@@ -328,6 +326,24 @@ a:hover {
     }
 
     #about p {
+        font-size: 16px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .hero-container h1 {
+        font-size: 34px;
+    }
+
+    .hero-container p {
+        padding: 0 20px;
         font-size: 16px;
     }
 }
@@ -386,22 +402,5 @@ div:last-child p {
    RESPONSIVE DESIGN
 --------------------------------*/
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-bottom: 10px;
-    }
-
-    img {
-        width: 200px;
-    }
-
-    .hero-container h1 {
-        font-size: 34px;
-    }
-
-    .hero-container p {
-        padding: 0 20px;
-        font-size: 16px;
-    }
+    
 }
